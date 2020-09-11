@@ -18,8 +18,8 @@ _This application uses the Exchange Rate free API to calculate in real time, the
 []-Convert user input
   [x]-Attach API to submit button
   [x]-Call the API with user input
-    []-If 200 and not an error, resolve and display converted currency to user
-    []-If 200 but it's an error, reject with error message that the currency doesn't exist
+    [x]-If 200 and not an error, resolve and display converted currency to user
+    [x]-If 200 but it's an error, reject with error message that the currency doesn't exist
     []-If not 200 and, reject with error message about bad response
   [x]-Create conversion calc object, static method for api call (conversion actually done in UI ouput)
 
