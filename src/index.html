@@ -3,10 +3,19 @@
   <title>Currency Exchange Calculator</title>
 </head>
 <body>
-  <div class="container">
+  <div class="container" id="intro">
     <h1>Currency Exchange Calculator</h1>
+    <p>Find out the current exchange rate in real time! Input any amount in U.S. dollars and choose which currency it should be converted to.</p>
+  </div>
+  <div class="container" id="body">
+    <form id="formOne">
+      <div class="form-group">
+        <label for="value">Enter amount in U.S. dollars:</label>
+        <input id="value" class="form-control" type="text" placeholder="example type: 12.50">
+      </div>
+    </form>
+
     <button type="submit" class="btn btn-success" id="btn-calculate">Calculate Rate</button>
-  
   </div>
 </body>
 </html>
