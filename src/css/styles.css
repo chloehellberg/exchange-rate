@@ -1,3 +1,7 @@
-#output {
+#goodOutput {
+  display: none;
+}
+
+#errorOutput {
   display: none;
 }

@@ -33,9 +33,11 @@
     </form>
     <button type="submit" class="btn btn-success" id="btn-calculate">Calculate Exchange Rate</button>
   </div>
-  <div class="container" id="output">
+  <div class="container" id="goodOutput">
     <p>Your USD are worth <span id="rate"></span> in <span id="countryCode"></span></p>
-    <p><span id="showErrors"></span></p>
+  </div>
+  <div class="container" id="errorOutput">
+    <p><span id="showErrors"></span>Sorry, that country ISO isn't included in our database.</p>
   </div>
 </body>
 </html>

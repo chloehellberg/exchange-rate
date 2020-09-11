@@ -20,12 +20,12 @@ $(document).ready(function() {
     promise.then(function(response) {
       const body = JSON.parse(response);
       if (body.conversion_rates[country]) {
-        $('#output').show();
+        $('#goodOutput').show();
         $('#rate').text((body.conversion_rates[country] * usDollars).toFixed(2));
         $('#countryCode').text(country);
       } else {
-        $('#ouput').show();
-        $('#rate').text('Sorry no no');
+        $('#errorOutput').show();
+        $('#showErrors').text();
       }
     }), function(error) {
       $('#output').show();
