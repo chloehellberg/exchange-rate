@@ -8,7 +8,7 @@
 
 _This application uses the Exchange Rate free API to calculate in real time, the current exchange rate from US dollars to at least 5 different currencies. A user is able to type in an amount in U.S. dollars and then choose which currency it should be converted to and see the total amount they entered in converted currency. If the API call results in an error, the application should also return a notification to the user that states what the error is. If the query response doesn't include a particular currency, the application should also return a notification that states the currency in question doesn't exist._
 
-## RoadMap (to be removed from README later)
+## Road Map/Build Spec
 [x]-Accept user input (as 0.00)    (Don't forget tofixed)
   [x]-Input element has dollar sign in front of it and example of how user should add input
   [x]-Create dropdown with 6 countries
@@ -20,7 +20,7 @@ _This application uses the Exchange Rate free API to calculate in real time, the
   [x]-Call the API with user input
     [x]-If 200 and not an error, resolve and display converted currency to user
     [x]-If 200 but it's an error, reject with error message that the currency doesn't exist
-    []-If not 200 and, reject with error message about bad response
+    [x]-If not 200 and, reject with error message about bad response
   [x]-Create conversion calc object, static method for api call (conversion actually done in UI ouput)
 
 
