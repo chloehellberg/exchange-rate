@@ -15,18 +15,22 @@ $(document).ready(function() {
     let usDollars = parseFloat($('#dollars').val()).toFixed(2);
     let country = $('#country').val();
     clearOptions();
-    console.log("Dollars", usDollars);
-    console.log("Country", country);
 
     let promise = Exchange.getExchangeRate(country);
     promise.then(function(response) {
       const body = JSON.parse(response);
-      $('#output').show();
-      $('#rate').text((body.conversion_rates[country] * usDollars).toFixed(2));
-      $('#countryCode').text(country);
+      if (body.conversion_rates[country]) {
+        $('#output').show();
+        $('#rate').text((body.conversion_rates[country] * usDollars).toFixed(2));
+        $('#countryCode').text(country);
+      } else {
+        $('#ouput').show();
+        $('#rate').text('Sorry no no');
+      }
     }), function(error) {
-      const errorBody = JSON.parse(error);
-      $('#showErrors').text(`There was an ${errorBody.result} processing your request.`);
+      $('#output').show();
+      $('#showErrors').text(`There was an error processing your request: ${error}`);
     };
   });
 });
+
