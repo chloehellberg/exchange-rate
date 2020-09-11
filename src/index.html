@@ -9,13 +9,30 @@
   </div>
   <div class="container" id="body">
     <form id="formOne">
-      <div class="form-group">
-        <label for="value">Enter amount in U.S. dollars:</label>
-        <input id="value" class="form-control" type="text" placeholder="example type: 12.50">
+      <div class="form-group-one">
+        <label for="dollars">Enter amount in U.S. dollars:</label>
+          <div class="input-group mb-2 mr-sm-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text">$</div>
+            </div>
+            <input id="dollars" class="form-control" type="text">
+          </div>
+      </div>
+      <div class="form-group-two">
+        <label for="country">Select which country to convert to:</label>
+        <select class="form-control" id="country">
+          <option value="NZD">NZD - New Zealand dollar</option>
+          <option value="BRL">BRL - Brazillian real</option>
+          <option value="INR">INR - Indian rupee</option>
+          <option value="JPY">JPY - Japanese yen</option>
+          <option value="CAD">CAD - Canadian dollar</option>
+          <option value="EUR">EUR - Euro</option>
+          <option value="ACN">ACN - Animal Crossing Bells</option>
+        </select>
       </div>
     </form>
 
-    <button type="submit" class="btn btn-success" id="btn-calculate">Calculate Rate</button>
+    <button type="submit" class="btn btn-success" id="btn-calculate">Calculate Exchange Rate</button>
   </div>
 </body>
 </html>
