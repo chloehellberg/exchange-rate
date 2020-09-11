@@ -18,7 +18,7 @@ $(document).ready(function() {
     console.log("Dollars", usDollars);
     console.log("Country", country);
 
-    let promise = Exchange.getExchangeRate();
+    let promise = Exchange.getExchangeRate(country);
     promise.then(function(response) {
       const body = JSON.parse(response);
       $('#output').show();
