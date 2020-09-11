@@ -29,7 +29,7 @@ $(document).ready(function() {
       }
     }), function(error) {
       $('#output').show();
-      $('#showErrors').text(`There was an error processing your request: ${error}`);
+      $('.apiError').text(`There was an error processing your request: ${error}`);
     };
   });
 });
