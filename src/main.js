@@ -21,12 +21,12 @@ $(document).ready(function() {
     let promise = Exchange.getExchangeRate();
     promise.then(function(response) {
       const body = JSON.parse(response);
-      console.log(body);
       $('#output').show();
       $('#rate').text((body.conversion_rates[country] * usDollars).toFixed(2));
       $('#countryCode').text(country);
     }), function(error) {
-      $('#showErrors').text(`There was an error processing your request: ${error}`)
+      const errorBody = JSON.parse(error);
+      $('#showErrors').text(`There was an ${errorBody.result} processing your request.`);
     };
   });
 });
