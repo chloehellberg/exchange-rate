@@ -5,3 +5,11 @@
 #errorOutput {
   display: none;
 }
+
+body {
+  background-color: #9df9ef;
+}
+
+/* .form-control {
+  background-color: lightgreen;
+} */
