@@ -16,18 +16,18 @@ _This application uses the Exchange Rate free API to calculate in real time, the
     [x]-check jquery documentation on how to pull out input from dropdown
   
 []-Convert user input
-  []-Attach API to submit button
-  []-Call the API with user input
+  [x]-Attach API to submit button
+  [x]-Call the API with user input
     []-If 200 and not an error, resolve and display converted currency to user
     []-If 200 but it's an error, reject with error message that the currency doesn't exist
     []-If not 200 and, reject with error message about bad response
-  []-Create conversion calc object to store user input, static method for api call
+  [x]-Create conversion calc object, static method for api call (conversion actually done in UI ouput)
 
 
-[]-Display converted currency
-  []-Take the response from the API to display message
-  []-Use template literal to parse API JSON and display to user
-    []-Append to div
+[x]-Display converted currency
+  [x]-Take the response from the API to display message
+  [x]-Use template literal to parse API JSON and display to user
+    [x]-Append to div
     
 
 
