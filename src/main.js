@@ -21,7 +21,10 @@ $(document).ready(function() {
     let promise = Exchange.getExchangeRate();
     promise.then(function(response) {
       const body = JSON.parse(response);
-      $('#rate').text(`Rate is ${body.conversion_rates}`);
-    });
+      console.log(body);
+      $('#rate').text(`Rate is ${body.conversion_rates[country]}`);
+    }), function(error) {
+      $('#showErrors').text(`There was an error processing your request: ${error}`)
+    };
   });
 });
