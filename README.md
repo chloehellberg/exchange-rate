@@ -9,25 +9,25 @@
 _This application uses the Exchange Rate free API to calculate in real time, the current exchange rate from US dollars to at least 5 different currencies. A user is able to type in an amount in U.S. dollars and then choose which currency it should be converted to and see the total amount they entered in converted currency. If the API call results in an error, the application should also return a notification to the user that states what the error is. If the query response doesn't include a particular currency, the application should also return a notification that states the currency in question doesn't exist._
 
 ## RoadMap (to be removed from README later)
--Accept user input (as 0.00)    (don't forget tofixed)
-  -Input element has dollar sign in front of it and example of how user should add input
-  -Create dropdown with 6 countries
-  -jquery to take user input element and value from the dropdown and store in variables
-    -check jquery documentation on how to pull out input from dropdown
+[]-Accept user input (as 0.00)    (don't forget tofixed)
+  [x]-Input element has dollar sign in front of it and example of how user should add input
+  [x]-Create dropdown with 6 countries
+  [x]-jquery to take user input element and value from the dropdown and store in variables
+    [x]-check jquery documentation on how to pull out input from dropdown
   
--Convert user input
-  -Attach API to submit button
-  -Call the API with user input
-    -If 200 and not an error, resolve and display converted currency to user
-    -If 200 but it's an error, reject with error message that the currency doesn't exist
-    -If not 200 and, reject with error message about bad response
-  -Create conversion calc object to store user input, static method for api call
+[]-Convert user input
+  []-Attach API to submit button
+  []-Call the API with user input
+    []-If 200 and not an error, resolve and display converted currency to user
+    []-If 200 but it's an error, reject with error message that the currency doesn't exist
+    []-If not 200 and, reject with error message about bad response
+  []-Create conversion calc object to store user input, static method for api call
 
 
--Display converted currency
-  -Take the response from the API to display message
-  -Use template literal to parse API JSON and display to user
-    -Append to div
+[]-Display converted currency
+  []-Take the response from the API to display message
+  []-Use template literal to parse API JSON and display to user
+    []-Append to div
     
 
 
