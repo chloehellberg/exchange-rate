@@ -22,7 +22,9 @@ $(document).ready(function() {
     promise.then(function(response) {
       const body = JSON.parse(response);
       console.log(body);
-      $('#rate').text(`Rate is ${body.conversion_rates[country]}`);
+      $('#output').show();
+      $('#rate').text((body.conversion_rates[country] * usDollars).toFixed(2));
+      $('#countryCode').text(country);
     }), function(error) {
       $('#showErrors').text(`There was an error processing your request: ${error}`)
     };
