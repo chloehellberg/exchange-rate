@@ -12,9 +12,11 @@ function clearOptions() {
 
 $(document).ready(function() {
   $("#btn-calculate").click(function(){
-    let usDollars = $('#dollars').val();
+    let usDollars = parseFloat($('#dollars').val()).toFixed(2);
     let country = $('#country').val();
     clearOptions();
+    console.log("Dollars", usDollars);
+    console.log("Country", country);
 
     let promise = Exchange.getExchangeRate();
     promise.then(function(response) {
