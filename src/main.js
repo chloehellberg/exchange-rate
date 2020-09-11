@@ -25,6 +25,7 @@ $(document).ready(function() {
         $('#countryCode').text(country);
       } else {
         $('#errorOutput').show();
+        $('#goodOutput').hide();
         $('#showErrors').text();
       }
     }), function(error) {
