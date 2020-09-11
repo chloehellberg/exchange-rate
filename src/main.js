@@ -23,6 +23,7 @@ $(document).ready(function() {
         $('#goodOutput').show();
         $('#rate').text((body.conversion_rates[country] * usDollars).toFixed(2));
         $('#countryCode').text(country);
+        $('#errorOutput').hide();
       } else {
         $('#errorOutput').show();
         $('#goodOutput').hide();
