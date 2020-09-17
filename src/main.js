@@ -19,7 +19,7 @@ $(document).ready(function() {
     let promise = Exchange.getExchangeRate(country);
     promise.then(function(response) {
       const body = JSON.parse(response);
-      if (body.conversion_rates[country]) {
+      if (body.conversion_rates && body.conversion_rates[country]) {
         $('#goodOutput').show();
         $('#rate').text((body.conversion_rates[country] * usDollars).toFixed(2));
         $('#countryCode').text(country);
@@ -27,7 +27,7 @@ $(document).ready(function() {
       } else {
         $('#errorOutput').show();
         $('#goodOutput').hide();
-        $('#showErrors').text();
+        $('#showErrors').text(body["error-type"]);
       }
     }), function(error) {
       $('#output').show();
